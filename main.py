@@ -1,10 +1,13 @@
+#libaries which we will use install them using terminal or Python interpreter
 import time
-
 import numpy as np
 import cv2
 import time
+
 captureDevice = cv2.VideoCapture(0) #captureDevice = camera
+#I used my computer's camera so in brackets 0. If you will use webcam instade of it use number 1
 time.sleep(3)
+#at this time when you will run a code camera will automaticly take a photo in 3 minutes
 background = 0
 for i in range(30):
     ret,background= captureDevice.read()
@@ -19,7 +22,7 @@ while True:
     lower=np.array([0,120,70])
     upper=np.array([10,255,255])
     mask01=cv2.inRange(hsv,lower,upper)
-
+#RGB. Use red clothes or cloak everthing you want but use red thing because here I wrote that if color will be red program should show background
     lower_red = np.array([170, 120, 70])
     upper_red = np.array([180, 255, 255])
     mask02 = cv2.inRange(hsv, lower_red, upper_red)
