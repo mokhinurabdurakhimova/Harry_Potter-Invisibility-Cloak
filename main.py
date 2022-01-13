@@ -6,7 +6,7 @@ import time
 
 captureDevice = cv2.VideoCapture(0) #captureDevice = camera
 #I used my computer's camera so in brackets 0. If you will use webcam instade of it use number 1
-time.sleep(3)
+time.sleep(5)
 #at this time when you will run a code camera will automaticly take a photo in 3 minutes
 background = 0
 for i in range(30):
@@ -36,6 +36,7 @@ while True:
     cv2.imshow('background', background)
     cv2.imshow("mask01", mask01)
     k=cv2.waitKey(1)
+    
     if cv2.waitKey(1) & 0xFF == ord('q'):
         break
 
