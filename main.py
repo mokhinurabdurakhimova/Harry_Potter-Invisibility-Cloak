@@ -6,7 +6,7 @@ import time
 
 captureDevice = cv2.VideoCapture(0) #captureDevice = camera
 #I used my computer's camera so in brackets 0. If you will use webcam instade of it use number 1
-time.sleep(5)
+time.sleep(10)
 #at this time when you will run a code camera will automaticly take a photo in 3 minutes
 background = 0
 for i in range(30):
